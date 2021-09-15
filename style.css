@@ -14,13 +14,15 @@ html {
     padding: 35px 15px 5px;
     text-align: center;
     display: grid;
-    grid-auto-flow: column
+    grid-auto-flow: column;
+    background-color: #0C0032;
 }
 
 #line_under_header {
     border-bottom: 1px solid #3500D3;
     margin: auto;
     width: 1200px;
+    padding-top: 10px;
 }
 
 #page_header_text {
@@ -33,5 +35,18 @@ html {
 
 #login_register_links {
     margin: auto;
+    font-size: larger;
+}
+
+.center_div_1 {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#index_body_text_header {
+    font-size: x-large;
+}
+
+p {
     font-size: larger;
 }
