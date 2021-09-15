@@ -1,0 +1,37 @@
+html {
+    background-color: #282828;
+    color: white;
+}
+
+#brandImg {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.header_div {
+    height: 150px;
+    padding: 35px 15px 5px;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: column
+}
+
+#line_under_header {
+    border-bottom: 1px solid #3500D3;
+    margin: auto;
+    width: 1200px;
+}
+
+#page_header_text {
+    font-size: xx-large;
+}
+
+#page_header_text_div {
+    margin: auto;
+}
+
+#login_register_links {
+    margin: auto;
+    font-size: larger;
+}
