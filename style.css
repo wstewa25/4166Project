@@ -74,3 +74,11 @@ footer {
 #cubicle_shop_link {
     margin: auto;
 }
+
+.connections_list_header {
+    font-size: x-large;
+}
+
+li {
+    font-size: larger;
+}
