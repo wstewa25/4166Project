@@ -50,3 +50,27 @@ html {
 p {
     font-size: larger;
 }
+
+footer {
+    height: 100px;
+    background-color: #0C0032;
+}
+
+#footer_div {
+    padding: 35px 15px 5px;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#copyright_footer {
+    margin: auto;
+}
+
+#contact_us_link {
+    margin: auto;
+}
+
+#cubicle_shop_link {
+    margin: auto;
+}
