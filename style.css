@@ -176,3 +176,7 @@ input[type=time] {
 label {
     padding: 12px 12px 12px 0;
 }
+
+#new_connection_body_section {
+    font-size: larger;
+}
