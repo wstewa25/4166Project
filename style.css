@@ -141,6 +141,13 @@ td {
     margin-right: 50px;
 }
 
+#create_connection_button {
+    background-color: #0C0032;
+    height: 50px;
+    width: 200px;
+    color: white;
+}
+
 #connection_change_button_div {
     text-align: center;
 }
@@ -151,4 +158,21 @@ td {
 
 #connections_page_nav_link {
     margin: auto;
+}
+
+#new_connection_form {
+    text-align: center;
+}
+
+input[type=text],
+select,
+textarea,
+input[type=date],
+input[type=time] {
+    padding: 12px;
+    width: 100%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
 }
