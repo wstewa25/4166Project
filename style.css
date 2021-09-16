@@ -1,13 +1,21 @@
+/*set background and text color site-wide*/
+
 html {
     background-color: #282828;
     color: white;
 }
+
+
+/*styling for image in header*/
 
 #brandImg {
     width: 150px;
     height: 150px;
     margin: auto;
 }
+
+
+/*styling for header section of site, spacing, color*/
 
 .header_div {
     height: 150px;
@@ -18,9 +26,15 @@ html {
     background-color: #0C0032;
 }
 
+
+/*set color for site headliner section as a whole*/
+
 #site_headliner {
     background-color: #0C0032;
 }
+
+
+/*set up styling for a type of line to put underneath the header*/
 
 #line_under_header {
     border-bottom: 1px solid #3500D3;
@@ -29,42 +43,80 @@ html {
     padding-top: 10px;
 }
 
+
+/*Another style for a blue line, this one is unused but I was playing around with it, may use in future*/
+
 #line_under_header1 {
     border-bottom: 1px solid #3500D3;
     margin: auto;
     width: 1200px;
 }
 
+
+/*set font size xx large for page header text*/
+
 #page_header_text {
     font-size: xx-large;
 }
 
-#page_header_text_div {
+
+/*alignment inside of div for various elements*/
+
+#page_header_text_div,
+#copyright_footer,
+#connections_page_nav_link,
+#contact_us_link,
+#cubicle_shop_link {
     margin: auto;
 }
+
+
+/*styling for login and register links in header*/
 
 #login_register_links {
     margin: auto;
     font-size: larger;
 }
 
+
+/*a wrapper for centering content*/
+
 .center_div_1 {
     margin: 0 auto;
     width: 1000px;
 }
 
-#index_body_text_header {
+
+/*various xlarge font size changes*/
+
+#index_body_text_header,
+.connections_list_header,
+#connection_body_header,
+#connection_description_label,
+#nav_bar {
     font-size: x-large;
 }
 
-p {
+
+/*various larger font size changes*/
+
+p,
+li,
+.connection_info_element,
+#new_connection_body_section {
     font-size: larger;
 }
+
+
+/*footer height/color*/
 
 footer {
     height: 100px;
     background-color: #0C0032;
 }
+
+
+/*navigation bar div styling*/
 
 #nav_div {
     background-color: #0C0032;
@@ -74,6 +126,9 @@ footer {
     color: white;
 }
 
+
+/*footer div styling*/
+
 #footer_div {
     padding: 35px 15px 5px;
     text-align: center;
@@ -81,56 +136,39 @@ footer {
     grid-auto-flow: column;
 }
 
-#copyright_footer {
-    margin: auto;
-}
 
-#contact_us_link {
-    margin: auto;
-}
-
-#cubicle_shop_link {
-    margin: auto;
-}
-
-.connections_list_header {
-    font-size: x-large;
-}
-
-li {
-    font-size: larger;
-}
-
-.connection_info_element {
-    font-size: larger;
-}
+/*connection information label styling for connection page*/
 
 .connection_info_label {
     font-size: larger;
     font-weight: bold;
 }
 
+
+/*styling for image on connection page*/
+
 #connection_image {
     height: 200px;
     width: 200px;
 }
 
-#connection_body_header {
-    font-size: x-large;
-}
+
+/*table spacing for connection page*/
 
 table {
     border-collapse: separate;
     border-spacing: 50px 0;
 }
 
+
+/*padding for table cells*/
+
 td {
     padding: 10px 0;
 }
 
-#connection_description_label {
-    font-size: x-large;
-}
+
+/*update/delete button styling*/
 
 .connection_change_button {
     background-color: #0C0032;
@@ -141,6 +179,9 @@ td {
     margin-right: 50px;
 }
 
+
+/*create connection button styling*/
+
 #create_connection_button {
     background-color: #0C0032;
     height: 50px;
@@ -148,21 +189,16 @@ td {
     color: white;
 }
 
-#connection_change_button_div {
-    text-align: center;
-}
 
-#nav_bar {
-    font-size: x-large;
-}
+/*some center alignments*/
 
-#connections_page_nav_link {
-    margin: auto;
-}
-
+#connection_change_button_div,
 #new_connection_form {
     text-align: center;
 }
+
+
+/*styling for labels and inputs on new connection page*/
 
 input[type=text],
 select,
@@ -175,8 +211,4 @@ input[type=time] {
 
 label {
     padding: 12px 12px 12px 0;
-}
-
-#new_connection_body_section {
-    font-size: larger;
 }
