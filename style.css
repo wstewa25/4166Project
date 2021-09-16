@@ -18,11 +18,21 @@ html {
     background-color: #0C0032;
 }
 
+#site_headliner {
+    background-color: #0C0032;
+}
+
 #line_under_header {
     border-bottom: 1px solid #3500D3;
     margin: auto;
     width: 1200px;
     padding-top: 10px;
+}
+
+#line_under_header1 {
+    border-bottom: 1px solid #3500D3;
+    margin: auto;
+    width: 1200px;
 }
 
 #page_header_text {
@@ -56,6 +66,14 @@ footer {
     background-color: #0C0032;
 }
 
+#nav_div {
+    background-color: #0C0032;
+    height: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    color: white;
+}
+
 #footer_div {
     padding: 35px 15px 5px;
     text-align: center;
@@ -81,4 +99,56 @@ footer {
 
 li {
     font-size: larger;
+}
+
+.connection_info_element {
+    font-size: larger;
+}
+
+.connection_info_label {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#connection_image {
+    height: 200px;
+    width: 200px;
+}
+
+#connection_body_header {
+    font-size: x-large;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
+
+td {
+    padding: 10px 0;
+}
+
+#connection_description_label {
+    font-size: x-large;
+}
+
+.connection_change_button {
+    background-color: #0C0032;
+    height: 50px;
+    width: 100px;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#connection_change_button_div {
+    text-align: center;
+}
+
+#nav_bar {
+    font-size: x-large;
+}
+
+#connections_page_nav_link {
+    margin: auto;
 }
