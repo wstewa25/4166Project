@@ -1,0 +1,56 @@
+<%- include('./partials/header.ejs') %>
+    <main>
+        <section id="connection_page_body">
+            <!--placeholder connection for connection page-->
+            <div class="center_div_1">
+                <h3 id="connection_body_header">Megaminx Speedsolving Competition</h3>
+                <table id="connection_info_table">
+                    <tr class="connection_info_table_row">
+                        <td id="connection_image_element" rowspan=6><img src="img/megaminx.jpg" alt="Mexaminx" id="connection_image"></td>
+                        <td id="connection_host_label" class="connection_info_label">Host:</td>
+                        <td id="connection_host" class="connection_info_element">WilliamStewart1</td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="connection_catagory_label" class="connection_info_label">Category:</td>
+                        <td id="connection_catagory" class="connection_info_element">Competitions</td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="connection_date_label" class="connection_info_label">Date:</td>
+                        <td id="connection_date" class="connection_info_element">October 10, 2021</td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="connection_start_time_label" class="connection_info_label">Start Time:</td>
+                        <td id="connection_start_time" class="connection_info_element">12:00pm</td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="connection_end_time_label" class="connection_info_label">End Time:</td>
+                        <td id="connection_end_time" class="connection_info_element">9:00pm</td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="connection_location_label" class="connection_info_label">Location:</td>
+                        <td id="connection_location" class="connection_info_element">Tyvola Senior Center</td>
+                    </tr>
+                </table>
+                <br>
+                <div id="connection_description">
+                    <h3 id="connection_description_label">Description:</h3>
+                    <p id="connection_description_text">
+                        WCA sanctioned Megaminx speedsolving competition. Bring your megaminx and shoot for a new record whether it be a world record or a personal record!
+                    </p>
+                    <p>
+                        Remember, mexaminxes with raised corners for grip are against the rules as they provide an unfair advantage. Stickerless, black, and white megaminx colors are allowed. Good luck!
+                    </p>
+                    <br><br>
+                    <!--buttons for update/delete on connection-->
+                    <div id="connection_change_button_div">
+                        <form action="connections.html">
+                            <button class="connection_change_button" id="connection_update_button">Update</button>
+                            <button class="connection_change_button" id="connection_delete_button">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <%- include('./partials/footer.ejs') %>
