@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (controller.index));
 
 //GET /connections/new: send html form for creating a new connection
-router.get('/new', (controller.new));
+router.get('/newConnection', (controller.new));
 
 //POST /connections: create a new connection
 router.post('/', (controller.create));

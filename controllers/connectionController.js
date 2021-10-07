@@ -9,7 +9,7 @@ exports.index = (req, res) => {
 
 //GET /connections/new: send html form for creating a new connection
 exports.new = (req, res) => {
-    res.render('./connection/new');
+    res.render('./connection/newConnection');
 };
 
 //POST /connections: create a new connection
