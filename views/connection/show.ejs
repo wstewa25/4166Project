@@ -8,55 +8,55 @@
                 </h3>
                 <table id="connection_info_table">
                     <tr class="connection_info_table_row">
-                        <td id="connection_image_element" rowspan=6><img src="<%= connection.image %>" alt="Mexaminx" id="connection_image"></td>
+                        <td id="connection_image_element" rowspan=6><img src="<%= connection.image %>" alt="connection image" id="connection_image"></td>
                         <td id="connection_host_label" class="connection_info_label">Host:</td>
                         <td id="connection_host" class="connection_info_element">
                             <%= connection.host_name %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
-                        <td id="connection_catagory_label" class="connection_info_label">Category:</td>
-                        <td id="connection_catagory" class="connection_info_element">
+                        <td id="catagory_label" class="connection_info_label">Category:</td>
+                        <td id="catagory" class="connection_info_element">
                             <%= connection.catagory %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
-                        <td id="connection_date_label" class="connection_info_label">Date:</td>
-                        <td id="connection_date" class="connection_info_element">
+                        <td id="date_label" class="connection_info_label">Date:</td>
+                        <td id="date" class="connection_info_element">
                             <%= connection.date %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
-                        <td id="connection_start_time_label" class="connection_info_label">Start Time:</td>
-                        <td id="connection_start_time" class="connection_info_element">
+                        <td id="start_time_label" class="connection_info_label">Start Time:</td>
+                        <td id="start_time" class="connection_info_element">
                             <%= connection.start_time %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
-                        <td id="connection_end_time_label" class="connection_info_label">End Time:</td>
-                        <td id="connection_end_time" class="connection_info_element">
+                        <td id="end_time_label" class="connection_info_label">End Time:</td>
+                        <td id="end_time" class="connection_info_element">
                             <%= connection.end_time %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
-                        <td id="connection_location_label" class="connection_info_label">Location:</td>
-                        <td id="connection_location" class="connection_info_element">
+                        <td id="location_label" class="connection_info_label">Location:</td>
+                        <td id="location" class="connection_info_element">
                             <%= connection.location %>
                         </td>
                     </tr>
                 </table>
                 <br>
-                <div id="connection_description">
-                    <h3 id="connection_description_label">Description:</h3>
-                    <p id="connection_description_text">
+                <div id="details">
+                    <h3 id="details_label">Description:</h3>
+                    <p id="details_text">
                         <%= connection.details %>
                     </p>
                     <br><br>
                     <!--buttons for update/delete on connection-->
                     <div id="connection_change_button_div">
                         <form action="connections.html">
-                            <button class="connection_change_button" id="connection_update_button">Update</button>
-                            <button class="connection_change_button" id="connection_delete_button">Delete</button>
+                            <button type="submit" , formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
+                            <button type="submit" , formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
                         </form>
                     </div>
                 </div>

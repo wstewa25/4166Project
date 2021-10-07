@@ -13,13 +13,15 @@ exports.index = (req, res) => {
 //POST /connections: create a new connection
 exports.create = (req, res) => {
     let connection = req.body;
+    console.log(req.body);
     model.save(connection);
-    res.redirect('./connection/connections');
+    res.redirect('./connections');
 };
 
 //GET /connections/:id: send details of connection identified by id
 exports.show = (req, res, next) => {
     let id = req.params.id;
+    console.log(id);
     let connection = model.findByID(id);
     if (connection) {
         res.render('./connection/show', { connection });

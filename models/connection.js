@@ -121,7 +121,6 @@ exports.findByID = function(id) {
 
 exports.save = function(connection) {
     connection.id = uuidv4();
-    connection.createdAt = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT);
     connections.push(connection);
 }
 

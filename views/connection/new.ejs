@@ -4,26 +4,28 @@
             <br><br>
             <div class="center_div_1">
                 <!--Create new connection form-->
-                <form id="new_connection_form" action="connections.html">
-                    <label for="connection_name">Connection Name:</label>
-                    <input type="text" id="connection_name" name="connection_name"><br><br><br>
-                    <label for="connection_catagory">Catagory:</label>
-                    <select id="connection_catagory" name="connection_catagory">
+                <form id="new_connection_form" action='/connections' method='POST'>
+                    <label for="name">Connection Name:</label>
+                    <input type="text" id="name" name="name"><br><br><br>
+                    <label for="catagory">Catagory:</label>
+                    <select id="catagory" name="catagory">
                     <option value = "Learning/Practice">Learning/Practice</option>
                     <option value = "Competitions">Competitions</option>
                     <option value = "Social Gatherings">Social Gatherings</option>
                 </select><br><br><br>
-                    <label for="connection_date">Date:</label>
-                    <input type="date" id="connection_date" name="connection_date"><br><br><br>
-                    <label for="connection_start_time">Start Time:</label>
-                    <input type="time" id="connection_start_time" name="connection_start_time"><br><br><br>
-                    <label for="connection_end_time">End Time:</label>
-                    <input type="time" id="connection_end_time" name="connection_end_time"><br><br><br>
-                    <label for="connection_location">Location:</label>
-                    <input type="text" id="connection_location" name="connection_location">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date"><br><br><br>
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" id="start_time" name="start_time"><br><br><br>
+                    <label for="end_time">End Time:</label>
+                    <input type="time" id="end_time" name="end_time"><br><br><br>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                    <label for="image">Image Link:</label>
+                    <input type="text" id="image" name="image"><br><br><br>
                     <br><br><br>
-                    <label for="connection_description">Description:</label>
-                    <input type="text" id="connection_description" name="connection_description">
+                    <label for="details">Description:</label>
+                    <input type="text" id="details" name="details">
                     <br><br><br><br>
                     <input type="submit" value="Create Connection" id="create_connection_button">
                     <br><br><br>
