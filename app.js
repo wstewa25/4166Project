@@ -20,6 +20,8 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.use('/', connectionRoutes);
+
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
     err.status = 404;

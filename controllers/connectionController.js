@@ -4,12 +4,17 @@ const model = require('../models/connection');
 //GET /connections: send all connections to the user
 exports.index = (req, res) => {
     let connections = model.find();
-    res.render('./connection/index', { connections });
+    res.render('./index', { connections });
 };
 
 //GET /connections/new: send html form for creating a new connection
 exports.new = (req, res) => {
-    res.render('./connection/newConnection');
+    res.render('./newConnection');
+};
+
+exports.connections = (req, res) => {
+    let connections = model.find();
+    res.render('./connections');
 };
 
 //POST /connections: create a new connection
@@ -24,7 +29,7 @@ exports.show = (req, res, next) => {
     let id = req.params.id;
     let connection = model.findByID(id);
     if (connection) {
-        res.render('./connection/show', { connection });
+        res.render('.connection/show', { connection });
     } else {
         let err = new Error('Cannot find a connection with id ' + id);
         err.status = 404;
