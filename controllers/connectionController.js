@@ -35,6 +35,7 @@ exports.show = (req, res, next) => {
 //GET /connections/:id/edit: send html form for editing an existing connection
 exports.edit = (req, res, next) => {
     let id = req.params.id;
+    console.log(id);
     let connection = model.findByID(id);
     if (connection) {
         res.render('./connection/edit', { connection });

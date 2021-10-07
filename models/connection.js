@@ -127,8 +127,14 @@ exports.save = function(connection) {
 exports.updateById = function(id, newconnection) {
     let connection = connections.find(connection => connection.id === id);
     if (connection) {
-        connection.title = newconnection.title;
-        connection.content = newconnection.content;
+        connection.name = newconnection.name;
+        connection.details = newconnection.details;
+        connection.location = newconnection.location;
+        connection.image = newconnection.image;
+        connection.date = newconnection.date;
+        connection.start_time = newconnection.start_time;
+        connection.end_time = newconnection.end_time;
+        connection.catagory = newconnection.catagory;
         return true
     } else {
         return false;
