@@ -8,7 +8,7 @@ const connections = [{
         start_time: '13:00',
         end_time: '20:00',
         host_name: 'Willstew',
-        image: '../images/placehold.jpg',
+        image: 'https://th.bing.com/th/id/OIP.VOgtrmCX7CK9pXdu4iKTwwHaHt?w=196&h=205&c=7&r=0&o=5&pid=1.7',
         location: 'To be Determined'
     },
     {
@@ -20,7 +20,7 @@ const connections = [{
         start_time: '13:00',
         end_time: '18:00',
         host_name: 'Willstew',
-        image: '../images/placehold.jpg',
+        image: 'https://www.cubeskills.com/uploads/images/tutorials/useful-f2l-algorithms.png',
         location: 'To be Determined'
     },
     {
@@ -32,7 +32,7 @@ const connections = [{
         start_time: '14:00',
         end_time: '18:00',
         host_name: 'JonNichols',
-        image: '../images/placehold.jpg',
+        image: 'https://i.ytimg.com/vi/T3AYk8_ZeA8/maxresdefault.jpg',
         location: 'To be Determined'
     },
     {
@@ -56,7 +56,7 @@ const connections = [{
         start_time: '12:00',
         end_time: '20:00',
         host_name: 'WCA',
-        image: '../images/placehold.jpg',
+        image: 'https://th.bing.com/th/id/OIP.Yu0JzS1IczpWW-0Hob2b0wHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7',
         location: 'To be Determined'
     },
     {
@@ -68,7 +68,7 @@ const connections = [{
         start_time: '12:00',
         end_time: '20:00',
         host_name: 'WCA',
-        image: '../images/placehold.jpg',
+        image: 'https://cinoto.com.br/cubomagico/wp-content/uploads/2020/02/square-1-1.jpg',
         location: 'To be Determined'
     },
     {
@@ -80,7 +80,7 @@ const connections = [{
         start_time: '20:00',
         end_time: '0:00',
         host_name: 'Willstew',
-        image: '../images/placehold.jpg',
+        image: 'https://th.bing.com/th/id/OIP.X3aIxfhX8TPwEnArijuAnwHaD4?pid=ImgDet&rs=1',
         location: 'To be Determined'
     },
     {
@@ -92,7 +92,7 @@ const connections = [{
         start_time: '16:00',
         end_time: '23:00',
         host_name: 'JonNichols',
-        image: '../images/placehold.jpg',
+        image: 'https://i.pinimg.com/736x/a4/71/db/a471db4eea8fddf20247b91821350e82--rubix-cube-party-rubiks-cube-cake.jpg',
         location: 'To be Determined'
     },
     {
@@ -104,7 +104,7 @@ const connections = [{
         start_time: '18:00',
         end_time: '20:00',
         host_name: 'KevinRick',
-        image: '../images/placehold.jpg',
+        image: 'https://th.bing.com/th/id/OIP.gIrNB3rIzyV-v0Fsdk8xcwHaEc?pid=ImgDet&rs=1',
         location: 'To be Determined'
     },
 
