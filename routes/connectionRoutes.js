@@ -3,6 +3,7 @@ const controller = require('../controllers/connectionController');
 
 const router = express.Router();
 
+//GET /connections: sends the connections page
 router.get('/', (controller.index));
 
 //GET /connections/new: send form for creating a new connection
@@ -22,7 +23,5 @@ router.put('/:id', (controller.update));
 
 //DELETE /connections/:id: delete connection identified by id
 router.delete('/:id', (controller.delete));
-
-
 
 module.exports = router;

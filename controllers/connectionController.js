@@ -5,6 +5,7 @@ exports.new = (req, res) => {
     res.render('./connection/new');
 };
 
+//GET /connections sends the connections page
 exports.index = (req, res) => {
     let connections = model.find();
     res.render('./connection/connections', { connections });
@@ -13,7 +14,6 @@ exports.index = (req, res) => {
 //POST /connections: create a new connection
 exports.create = (req, res) => {
     let connection = req.body;
-    console.log(req.body);
     model.save(connection);
     res.redirect('./connections');
 };
@@ -21,7 +21,6 @@ exports.create = (req, res) => {
 //GET /connections/:id: send details of connection identified by id
 exports.show = (req, res, next) => {
     let id = req.params.id;
-    console.log(id);
     let connection = model.findByID(id);
     if (connection) {
         res.render('./connection/show', { connection });
@@ -35,7 +34,6 @@ exports.show = (req, res, next) => {
 //GET /connections/:id/edit: send form for editing an existing connection
 exports.edit = (req, res, next) => {
     let id = req.params.id;
-    console.log(id);
     let connection = model.findByID(id);
     if (connection) {
         res.render('./connection/edit', { connection });

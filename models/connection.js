@@ -1,4 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
+
+//Connections objects for testing, default connections.
 const connections = [{
         id: '1',
         name: 'Learn to Solve the Cube: Beginners Course',
@@ -110,19 +112,23 @@ const connections = [{
 
 ];
 
+//Find a specific connection
 exports.find = function() {
     return connections;
 }
 
+//Find a connection using its id
 exports.findByID = function(id) {
     return connections.find(connection => connection.id === id);
 }
 
+//Save a connection to the connections array after generating an id using uuidv4
 exports.save = function(connection) {
     connection.id = uuidv4();
     connections.push(connection);
 }
 
+//Update all of the values of a connection after the update button is pressed from the edit page
 exports.updateById = function(id, newconnection) {
     let connection = connections.find(connection => connection.id === id);
     if (connection) {
@@ -140,6 +146,7 @@ exports.updateById = function(id, newconnection) {
     }
 }
 
+//Delete a connection by using its id to find and delete it
 exports.deleteById = function(id) {
     let index = connections.findIndex(connection => connection.id === id);
     if (index !== -1) {
