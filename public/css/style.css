@@ -65,8 +65,10 @@ html {
 #page_header_text_div,
 #copyright_footer,
 #connections_page_nav_link,
+#about_page_nav_link,
 #contact_us_link,
-#cubicle_shop_link {
+#cubicle_shop_link,
+#home_page_nav_link {
     margin: auto;
 }
 

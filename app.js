@@ -2,6 +2,7 @@ const morgan = require('morgan');
 const ejs = require('ejs');
 const express = require('express');
 const connectionRoutes = require('./routes/connectionRoutes');
+const standardRoutes = require('./routes/standardRoutes');
 const methodOverride = require("method-override");
 
 const app = express();
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/connections', connectionRoutes);
+app.use('/', standardRoutes);
 
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
