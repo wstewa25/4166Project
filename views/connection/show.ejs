@@ -55,8 +55,8 @@
                     <!--buttons for update/delete on connection-->
                     <div id="connection_change_button_div">
                         <form action="connections.html">
-                            <button type="submit" , formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
-                            <button type="submit" , formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
+                            <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
+                            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
                         </form>
                     </div>
                 </div>
