@@ -4,12 +4,21 @@ const express = require('express');
 const connectionRoutes = require('./routes/connectionRoutes');
 const standardRoutes = require('./routes/standardRoutes');
 const methodOverride = require("method-override");
+const mongoose = require('mongoose');
 
 const app = express();
 
 let port = 3000;
 let host = 'localhost';
 app.set('view engine', 'ejs');
+
+mongoose.connect('mongodb://localhost:27017/demos', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        app.listen(port, host, () => {
+            console.log('Server is running on port ' + port);
+        });
+    })
+    .catch(er => console.log(err.message));
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -40,9 +49,4 @@ app.use((err, req, res, next) => {
     }
     res.status(err.status);
     res.render('error', { error: err });
-});
-
-//Listen on port
-app.listen(port, host, () => {
-    console.log('Server is running on port', port)
 });
