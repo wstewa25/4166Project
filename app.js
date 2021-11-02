@@ -12,7 +12,7 @@ let port = 3000;
 let host = 'localhost';
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost:27017/demos', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/project', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         app.listen(port, host, () => {
             console.log('Server is running on port ' + port);
