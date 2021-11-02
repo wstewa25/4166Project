@@ -7,24 +7,24 @@
                 <form id="new_connection_form" method="POST" action="/connections/<%= connection.id %>?_method=PUT">
                     <label for="name">Connection Name:</label>
                     <input type="text" id="name" name="name" value="<%= connection.name %>"><br><br><br>
-                    <label for="catagory">Catagory:</label>
+                    <label for="category">category:</label>
 
-                    <% if (connection.catagory == 'Learning/Practice') { %>
-                        <select id="catagory" name="catagory">
+                    <% if (connection.category == 'Learning/Practice') { %>
+                        <select id="category" name="category">
                     <option value = "Learning/Practice" selected>Learning/Practice</option>
                     <option value = "Competitions">Competitions</option>
                     <option value = "Social Gatherings">Social Gatherings</option>
                     <% } %>
 
-                    <% if (connection.catagory == 'Competitions') { %>
-                        <select id="catagory" name="catagory">
+                    <% if (connection.category == 'Competitions') { %>
+                        <select id="category" name="category">
                         <option value = "Learning/Practice">Learning/Practice</option>
                         <option value = "Competitions" selected>Competitions</option>
                         <option value = "Social Gatherings">Social Gatherings</option>
                         <% } %>
 
-                        <% if (connection.catagory == 'Social Gatherings') { %>
-                            <select id="catagory" name="catagory">
+                        <% if (connection.category == 'Social Gatherings') { %>
+                            <select id="category" name="category">
                             <option value = "Learning/Practice">Learning/Practice</option>
                             <option value = "Competitions">Competitions</option>
                             <option value = "Social Gatherings" selected>Social Gatherings</option>
