@@ -6,21 +6,21 @@ exports.new = (req, res) => {
 };
 
 //GET /connections sends the connections page
-exports.index = (req, res) => {
+exports.index = (req, res, next) => {
     model.find()
         .then(connections => res.render('./connection/connections', { connections }))
         .catch(err => next(err));
 };
 
 //POST /connections: create a new connection
-exports.create = (req, res) => {
+exports.create = (req, res, next) => {
     let connection = new model(req.body);
 
     connection.save()
         .then(connection => res.redirect('/connections'))
         .catch(err => {
             if (err.name === 'ValidationError') {
-                error.status = 400;
+                err.status = 400;
             }
             next(err);
         });
