@@ -5,6 +5,9 @@ const connectionRoutes = require('./routes/connectionRoutes');
 const standardRoutes = require('./routes/standardRoutes');
 const methodOverride = require("method-override");
 const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const flash = require('connect-flash');
 
 const app = express();
 
