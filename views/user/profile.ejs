@@ -4,17 +4,17 @@
         <h2>Welcome,
             <%=user.firstName%>
         </h2>
-        <% if(stories.length) { %>
-            <p>You have created the following stories</p>
-            <%stories.forEach(story => { %>
-                <a href='/stories/<%= story.id %>'>
+        <% if(connections.length) { %>
+            <p>You have created the following connections</p>
+            <%connections.forEach(connection => { %>
+                <a href='/connections/<%= connection.id %>'>
                     <p>
-                        <%= story.title %>
+                        <%= connection.title %>
                     </p>
                 </a>
                 <% });
     } else { %>
-                    <p>You have not created any stories</p>
+                    <p>You have not created any connections</p>
                     <% } %>
     </div>
 

@@ -1,12 +1,12 @@
 const model = require('../models/user');
-const Story = require('../models/connection');
+const connection = require('../models/connection');
 
 exports.new = (req, res) => {
     return res.render('./user/new');
 };
 
 exports.create = (req, res, next) => {
-    let user = new model(req.body); //create a new story document
+    let user = new model(req.body); //create a new connection document
     user.save() //insert the document to the database
         .then(user => res.redirect('/users/login'))
         .catch(err => {
@@ -57,10 +57,10 @@ exports.login = (req, res, next) => {
 
 exports.profile = (req, res, next) => {
     let id = req.session.user;
-    Promise.all([model.findById(id), Story.find({ author: id })])
+    Promise.all([model.findById(id), connection.find({ author: id })])
         .then(results => {
-            const [user, stories] = results;
-            res.render('./user/profile', { user, stories });
+            const [user, connections] = results;
+            res.render('./user/profile', { user, connections });
         })
         .catch(err => next(err));
 };

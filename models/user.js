@@ -28,5 +28,5 @@ userSchema.methods.comparePassword = function(inputPassword) {
   return bcrypt.compare(inputPassword, user.password);
 }
 
-//collection name is stories in the database
+//collection name is connections in the database
 module.exports = mongoose.model('User', userSchema);
