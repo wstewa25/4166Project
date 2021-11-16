@@ -3,6 +3,7 @@ const ejs = require('ejs');
 const express = require('express');
 const connectionRoutes = require('./routes/connectionRoutes');
 const standardRoutes = require('./routes/standardRoutes');
+const userRoutes = require('./routes/userRoutes');
 const methodOverride = require("method-override");
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -15,7 +16,7 @@ let port = 3000;
 let host = 'localhost';
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost:27017/project', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect('mongodb://localhost:27017/project', { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         //start app
         app.listen(port, host, () => {
