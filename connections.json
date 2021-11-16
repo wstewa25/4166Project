@@ -1,0 +1,145 @@
+[{
+  "_id": {
+    "$oid": "619409fb8f2001d1dc5ffa53"
+  },
+  "name": "Learn to Solve the Cube: Beginners Course",
+  "category": "Learning/Practice",
+  "details": "Any beginners are welcome to come learn the first, most basic method to get started learning how to solve the cube. Come get started along your path to becoming a cuber!",
+  "date": "2022-12-12",
+  "start_time": "13:00",
+  "end_time": "20:00",
+  "image": "https://th.bing.com/th/id/OIP.VOgtrmCX7CK9pXdu4iKTwwHaHt?w=196&h=205&c=7&r=0&o=5&pid=1.7",
+  "location": "To Be Determined",
+  "author": {
+    "$oid": "6194093d8f2001d1dc5ffa4e"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61940a7b8f2001d1dc5ffa68"
+  },
+  "name": "Learn F2L the Easy Way: Intermediate Course",
+  "category": "Learning/Practice",
+  "details": "For intermediate cubers seeking to improve their times, and turn corner and edge insertion into one fluent process. Come meet and learn f2l, one of the biggest ways to speed up your times and score new records!",
+  "date": "2022-12-13",
+  "start_time": "13:00",
+  "end_time": "20:00",
+  "image": "https://www.cubeskills.com/uploads/images/tutorials/useful-f2l-algorithms.png",
+  "location": "To Be Determined",
+  "author": {
+    "$oid": "6194093d8f2001d1dc5ffa4e"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61940b438f2001d1dc5ffa6e"
+  },
+  "name": "Practicing Oll and Pll Alogrithms: Group Practice",
+  "category": "Learning/Practice",
+  "details": "All cubers in the process of learning OLL and PLL, or cubers who are just looking to hang out and practice, there will be a practice session for OLL and PLL algorithms I am hosing at my house on this day",
+  "date": "2022-12-14",
+  "start_time": "14:00",
+  "end_time": "18:00",
+  "image": "https://i.ytimg.com/vi/T3AYk8_ZeA8/maxresdefault.jpg",
+  "location": "To be Determined",
+  "author": {
+    "$oid": "6194093d8f2001d1dc5ffa4e"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61940c198f2001d1dc5ffa7c"
+  },
+  "name": "Megaminx Speedsolving Competition",
+  "category": "Competitions",
+  "details": "WCA sanctioned Megaminx speedsolving competition. Bring your megaminx and shoot for a new record whether it be a world record or a personal record! Remember, megaminxes with raised corners for grip are against the rules as they provide an unfair advantage. Stickerless, black, and white megaminx colors are allowed. Good luck!",
+  "date": "2021-12-15",
+  "start_time": "12:00",
+  "end_time": "20:00",
+  "image": "../images/megaminx.jpg",
+  "location": "Tyvola Senior Center",
+  "author": {
+    "$oid": "61940b918f2001d1dc5ffa73"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61940c898f2001d1dc5ffa84"
+  },
+  "name": "Blindfolded 3x3 Speedsolving Competition",
+  "category": "Competitions",
+  "details": "WCA sanctioned blindfolded speed solving competition. 3x3 cubes only.",
+  "date": "2021-12-16",
+  "start_time": "12:00",
+  "end_time": "20:00",
+  "image": "https://th.bing.com/th/id/OIP.Yu0JzS1IczpWW-0Hob2b0wHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7",
+  "location": "To Be Determined",
+  "author": {
+    "$oid": "61940b918f2001d1dc5ffa73"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61940cdf8f2001d1dc5ffa89"
+  },
+  "name": "Square-1 Ao5 Competition",
+  "category": "Competitions",
+  "details": "WCA sanctioned Average of 5 Square-1 competition.",
+  "date": "2022-12-17",
+  "start_time": "12:00",
+  "end_time": "20:00",
+  "image": "https://cinoto.com.br/cubomagico/wp-content/uploads/2020/02/square-1-1.jpg",
+  "location": "To Be Determined",
+  "author": {
+    "$oid": "61940b918f2001d1dc5ffa73"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619410c08f2001d1dc5ffaa4"
+  },
+  "name": "Cubers Night Out: Escape Room Night",
+  "category": "Social Gatherings",
+  "details": "Members of charlotte cubers club, come hang out and spend night out at an escape room!",
+  "date": "2021-12-18",
+  "start_time": "20:00",
+  "end_time": "00:00",
+  "image": "https://th.bing.com/th/id/OIP.X3aIxfhX8TPwEnArijuAnwHaD4?pid=ImgDet&rs=1",
+  "location": "To be Determined",
+  "author": {
+    "$oid": "61940d478f2001d1dc5ffa9f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619411128f2001d1dc5ffaaa"
+  },
+  "name": "Cuber Gathering: Party at my place!",
+  "category": "Social Gatherings",
+  "details": "Celebrating nothing in particular, lets party!",
+  "date": "2021-12-22",
+  "start_time": "16:00",
+  "end_time": "23:00",
+  "image": "https://i.pinimg.com/736x/a4/71/db/a471db4eea8fddf20247b91821350e82--rubix-cube-party-rubiks-cube-cake.jpg",
+  "location": "To Be Determined",
+  "author": {
+    "$oid": "61940d478f2001d1dc5ffa9f"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619412d88f2001d1dc5ffaaf"
+  },
+  "name": "Charlotte Cubing Club Dinner Event at Midwood Smokehouse",
+  "category": "Social Gatherings",
+  "details": "Hosting a dinner at Midwood Smokehouse, all cubers club members welcome.",
+  "date": "2021-12-20",
+  "start_time": "18:00",
+  "end_time": "20:00",
+  "image": "https://th.bing.com/th/id/OIP.gIrNB3rIzyV-v0Fsdk8xcwHaEc?pid=ImgDet&rs=1",
+  "location": "Midwood Smokehouse",
+  "author": {
+    "$oid": "61940d478f2001d1dc5ffa9f"
+  },
+  "__v": 0
+}]
