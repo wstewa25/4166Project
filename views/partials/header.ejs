@@ -47,19 +47,20 @@
             </div>
         </section>
     </header>
+    <div class = "center_div_1">
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
 
-    <% if(errorMessages.length > 0) {%>
-        <% errorMessages.forEach(message=>{%>
-            <div class='error'>
-                <%=message%>
-            </div>
-        <%});%>
-    <%}%>
-
-    <% if(successMessages.length > 0) {%>
-        <% successMessages.forEach(message=>{%>
-            <div class='success'>
-                <%=message%>
-            </div>
-        <%});%>
-    <%}%>
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message=>{%>
+                <div class='success'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+    </div>
