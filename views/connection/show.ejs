@@ -11,7 +11,7 @@
                         <td id="connection_image_element" rowspan=6><img src="<%= connection.image %>" alt="connection image" id="connection_image"></td>
                         <td id="connection_host_label" class="connection_info_label">Host:</td>
                         <td id="connection_host" class="connection_info_element">
-                            <%= connection.author %>
+                            <%= connection.author.firstName + ' ' + connection.author.lastName %>
                         </td>
                     </tr>
                     <tr class="connection_info_table_row">
@@ -54,10 +54,12 @@
                     <br><br>
                     <!--buttons for update/delete on connection-->
                     <div id="connection_change_button_div">
-                        <form action="connections.html">
-                            <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
-                            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
-                        </form>
+                        <% if(user == connection.author._id) { %>
+                            <form action="connections.html">
+                                <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
+                            </form>
+                        <% } %>
                     </div>
                 </div>
             </div>
