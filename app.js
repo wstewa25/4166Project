@@ -57,6 +57,7 @@ app.get('/', (req, res) => {
 //Set up routing
 app.use('/connections', connectionRoutes);
 app.use('/', standardRoutes);
+app.use('/users', userRoutes);
 
 //Error handling from app.js
 app.use((req, res, next) => {
