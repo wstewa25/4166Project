@@ -1,21 +1,25 @@
 <%- include('../partials/header.ejs') %>
-
-    <div class="content">
-        <h2>Welcome,
-            <%=user.firstName%>
-        </h2>
-        <% if(connections.length) { %>
-            <p>You have created the following connections</p>
-            <%connections.forEach(connection => { %>
-                <a href='/connections/<%= connection.id %>'>
-                    <p>
-                        <%= connection.name %>
-                    </p>
-                </a>
-        <% });
-        } else { %>
-            <p>You have not created any connections</p>
-        <% } %>
-    </div>
-
+<main>
+    <section id="index_main_body_text_section">
+        <div class="center_div_1">
+            <br><br>
+            <h3 id="index_body_text_header"> Welcome, <%=user.firstName%> </h3>
+            <% if(connections.length) { %>
+                <div id="index_body_text_div">
+                    <p>You have created the following connections:</p>
+                    <%connections.forEach(connection => { %>
+                        <a href='/connections/<%= connection.id %>'>
+                            <p><%= connection.name %></p>
+                        </a>
+                </div>
+            <% });
+            } else { %>
+                <div id = "index_body_text_div">
+                    <p>You have not created any connections</p>
+                </div>
+            <% } %>
+            <br><br>
+        </div>
+    </section>
+</main>
     <%- include('../partials/footer.ejs') %>
