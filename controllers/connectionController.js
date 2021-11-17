@@ -24,7 +24,7 @@ exports.create = (req, res, next) => {
             }
             next(err);
         });
-    res.redirect('/connections');
+    res.redirect('back');
 };
 
 //GET /connections/:id: send details of connection identified by id
@@ -77,10 +77,12 @@ exports.update = (req, res, next) => {
             }
         })
         .catch(err => {
-            if (err.name === "ValidationError")
+            if (err.name === "ValidationError") {
                 err.status = 400;
+            }
             next(err);
         });
+    res.redirect('back');
 };
 
 //DELETE /connections/:id: delete connection identified by id
