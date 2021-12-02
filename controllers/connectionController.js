@@ -1,4 +1,5 @@
 const model = require('../models/connection');
+const rsvpModel = require('../models/rsvp');
 
 //GET /connections sends the connections page
 exports.index = (req, res, next) => {
@@ -100,4 +101,43 @@ exports.delete = (req, res, next) => {
             }
         })
         .catch(err => next(err));
+};
+
+//RSVP /connections/:id/rsvp: rsvp to this connection
+exports.rsvp = (req, res, next) => {
+    let id = req.params.id;
+    rsvpModel.findOne({connection:id})
+    .then(rsvp => {
+        if (rsvp){
+            rsvpModel.findByIdAndUpdate(rsvp._id, {rsvp:req.body.rsvp}, {useFindAndModify: false, runValidators: true})
+            .then(rsvp => {
+                req.flash('success', 'Successfully updated RSVP');
+                res.redirect('/users/profile');
+            })
+            .catch(err => {
+                console.log(err);
+                if(err.name === 'ValidationError') {
+                    req.flash('error', err.message);
+                    return res.redirect('/back');
+                }
+                next(err);
+            });
+        } else {
+            let rsvp = new rsvpModel ({
+                connection: id,
+                rsvp: req.body.rsvp,
+                user: req.session.user
+            });
+            console.log(rsvpModel);
+            rsvp.save()
+            .then(rsvp =>{
+                req.flash('success', 'Successfully created RSVP');
+                res.redirect('/users/profile');
+            })
+            .catch(err=> {
+                req.flash('error', err.message);
+                next(err);
+            });
+        }
+    })
 };

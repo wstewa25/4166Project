@@ -37,3 +37,21 @@ exports.isAuthor = (req, res, next) => {
         })
         .catch(err => next(err));
 }
+
+//Checks if user is NOT the author of this connection
+exports.isNotAuthor = (req, res, next) => {
+    let id = req.params.id;
+    connection.findById(id)
+        .then(connection => {
+            if (connection) {
+                if (connection.author != req.session.user) {
+                    return next();
+                } else {
+                    let err = new Error('Unauthorized to access the resource');
+                    err.status = 401;
+                    return next(err);
+                }
+            }
+        })
+        .catch(err => next(err));
+}

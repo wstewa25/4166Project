@@ -62,9 +62,9 @@
                         <% } else if (user && user != connection.author._id) { %>
                             <form action="connections.html">
                                 <h3>Will you be attending this event?</h3><br>
-                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_yes_button">Yes</button>
-                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_maybe_button">No</button>
-                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_no_button">Maybe</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'YES' name = 'rsvp' id="connection_yes_button">Yes</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'MAYBE' name = 'rsvp' id="connection_maybe_button">Maybe</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'NO' name = 'rsvp' id="connection_no_button">No</button>
                             </form>
                         <% } %>
                     </div>
