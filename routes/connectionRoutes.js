@@ -1,4 +1,5 @@
 const express = require('express');
+const {body} = require('express-validator');
 const controller = require('../controllers/connectionController');
 const { isLoggedIn, isAuthor, isNotAuthor } = require('../middlewares/auth');
 const { validateId, validateRsvp, validateResults, validateConnection } = require('../middlewares/validator');
