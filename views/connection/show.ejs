@@ -59,6 +59,13 @@
                                 <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
                                 <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
                             </form>
+                        <% } else if (user && user != connection.author._id) { %>
+                            <form action="connections.html">
+                                <h3>Will you be attending this event?</h3><br>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_yes_button">Yes</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_maybe_button">No</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" id="connection_no_button">Maybe</button>
+                            </form>
                         <% } %>
                     </div>
                 </div>
