@@ -18,14 +18,17 @@ exports.create = (req, res, next) => {
     let connection = new model(req.body);
     connection.author = req.session.user;
     connection.save()
-        .then(connection => res.redirect('/connections'))
+        .then(connection => {
+            req.flash('success', 'Connection has been created successfully');
+            req.redirect('/connections');
+        })
         .catch(err => {
             if (err.name === 'ValidationError') {
-                err.status = 400;
+                req.flash('error', err.message);
+                return res.redirect('/back');
             }
             next(err);
         });
-    res.redirect('/connections');
 };
 
 //GET /connections/:id: send details of connection identified by id
@@ -79,14 +82,13 @@ exports.update = (req, res, next) => {
         })
         .catch(err => {
             if (err.name === "ValidationError") {
-                err.status = 400;
+                req.flash('error', err.message);
+                return res.redirect('/back');
             }
             next(err);
         });
-    res.redirect('/connections');
 };
 
-//DELETE /connections/:id: delete connection identified by id
 exports.delete = (req, res, next) => {
     let id = req.params.id;
 
