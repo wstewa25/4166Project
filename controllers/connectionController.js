@@ -31,11 +31,11 @@ exports.create = (req, res, next) => {
 //GET /connections/:id: send details of connection identified by id
 exports.show = (req, res, next) => {
     let id = req.params.id;
-
-    model.findById(id).populate('author', 'firstName lastName')
-        .then(connection => {
+    Promise.all([model.findById(id).populate('author', 'firstName lastName'), rsvpModel.count({connection:id, rsvp:'YES'})])
+        .then(results => {
+            const [connection, rsvps] = results;
             if (connection) {
-                return res.render('./connection/show', { connection });
+                return res.render('./connection/show', { connection, rsvps });
             } else {
                 let err = new Error('Cannot find a connection with id ' + id);
                 err.status = 404;
