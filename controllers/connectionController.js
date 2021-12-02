@@ -24,7 +24,7 @@ exports.create = (req, res, next) => {
             }
             next(err);
         });
-    res.redirect('back');
+    res.redirect('/connections');
 };
 
 //GET /connections/:id: send details of connection identified by id
@@ -82,7 +82,7 @@ exports.update = (req, res, next) => {
             }
             next(err);
         });
-    res.redirect('back');
+    res.redirect('/connections');
 };
 
 //DELETE /connections/:id: delete connection identified by id
