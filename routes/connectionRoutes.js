@@ -1,7 +1,7 @@
 const express = require('express');
 const controller = require('../controllers/connectionController');
 const { isLoggedIn, isAuthor, isNotAuthor } = require('../middlewares/auth');
-const { validateId } = require('../middlewares/validator');
+const { validateId, validateRsvp, validateResults, validateConnection } = require('../middlewares/validator');
 
 const router = express.Router();
 
@@ -12,22 +12,22 @@ router.get('/', (controller.index));
 router.get('/new', isLoggedIn, (controller.new));
 
 //POST /connections: create a new connection
-router.post('/', isLoggedIn, (controller.create));
+router.post('/', isLoggedIn, validateConnection, validateResults, (controller.create));
 
 //GET /connections/:id: send details of connection identified by id
 router.get('/:id', validateId, (controller.show));
 
 //GET /connections/:id/edit: send form for editing an existing connection
-router.get('/:id/edit', isLoggedIn, isAuthor,  validateId, (controller.edit));
+router.get('/:id/edit', validateId, isLoggedIn, isAuthor, (controller.edit));
 
 //PUT /connections/:id: update connection identified by id
-router.put('/:id', isLoggedIn, isAuthor,  validateId, (controller.update));
+router.put('/:id', validateId, isLoggedIn, isAuthor, validateConnection, validateResults, (controller.update));
 
 //DELETE /connections/:id: delete connection identified by id
-router.delete('/:id', isLoggedIn, isAuthor,  validateId, (controller.delete));
+router.delete('/:id', validateId, isLoggedIn, isAuthor, (controller.delete));
 
 //POST RSVP to connection
-router.post('/:id/rsvp', isLoggedIn, validateId, isNotAuthor, (controller.rsvp));
+router.post('/:id/rsvp', validateId, isLoggedIn, isNotAuthor, validateRsvp, validateResults, (controller.rsvp));
 
 //Delete RSVP
 router.delete('/:id/rsvp', validateId, isLoggedIn, (controller.deleteRsvp));
