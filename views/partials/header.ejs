@@ -16,8 +16,10 @@
                     <a href="/"><img src="/images/cubeimg.png" alt="brand img" id="brandImg"></a>
                 </div>
                 <div class="header_element" id="page_header_text_div">
-                    <% if (user.firstName) { %>
-                        <h2> Welcome <%= user.firstName %></h2>
+                    <% if (user) { %>
+                        <% if (user.firstName) { %>
+                            <h2> Welcome <%= user.firstName %></h2>
+                        <% } %>
                     <% } %>
                     <h1 id="page_header_text">CHARLOTTE CUBING CLUB</h1>
                 </div>
