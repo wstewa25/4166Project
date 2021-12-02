@@ -3,19 +3,37 @@
     <section id="index_main_body_text_section">
         <div class="center_div_1">
             <br><br>
-            <h3 id="index_body_text_header"> Welcome, <%=user.firstName%> </h3>
+            <h2 id="index_body_text_header"> Welcome, <%=user.firstName%> </h2>
             <div id="index_body_text_div">
                 <% if(connections.length) { %>
-                    <p>You have created the following connections:</p>
+                    <h3>You have created the following connections:</h3>
                     <%connections.forEach(connection => { %>
                         <a href='/connections/<%= connection.id %>'>
                             <p><%= connection.name %></p>
                         </a>
-                    <% });
-                } else { %>
+                    <% }); %>
+                <% } else { %>
                     <p>You have not created any connections</p>
                 <% } %>
                 <br><br>
+                <% if(rsvps.length) { %>
+                    <h3>You have RSVPed to the following Events:</h3>
+                    <table>
+                        <tr>
+                            <th>Connection Name</th>
+                            <th>RSVP Status</th>
+                        </tr>
+                        <%rsvps.forEach(rsvp => { %>
+                            <tr>
+                                <td><a href = '/connections/<%= rsvp.connection.id %>'><%= rsvp.connection.name %></a></td>
+                                <td><%= rsvp.rsvp %></td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                <% } else { %>
+                    <p>You have not RSVPed to any Events</p>
+                <% } %>
+            <br><br>
             </div>
         </div>
     </section>
