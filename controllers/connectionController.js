@@ -141,3 +141,16 @@ exports.rsvp = (req, res, next) => {
         }
     })
 };
+
+exports.deleteRsvp = (req, res, next)=>{
+    let id = req.params.id;
+    rsvpModel.findOneAndDelete({connection: id, user: req.session.user})
+    .then(rsvp => {
+        req.flash('success', 'Successfully deleted RSVP');
+        res.redirect('/users/profile');
+    })
+    .catch(err=> {
+        req.flash('error', err.message);
+        next(err);
+    });
+};

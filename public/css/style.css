@@ -95,7 +95,7 @@ html {
 .connections_list_header,
 #connection_body_header,
 #details_label,
-#nav_bar {
+#nav_bar, th {
     font-size: x-large;
 }
 
@@ -103,7 +103,7 @@ html {
 /*various larger font size changes*/
 
 p,
-li,
+li, td,
 .connection_info_element,
 #new_connection_body_section {
     font-size: larger;

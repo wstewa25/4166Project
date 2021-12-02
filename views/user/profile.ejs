@@ -7,11 +7,15 @@
             <div id="index_body_text_div">
                 <% if(connections.length) { %>
                     <h3>You have created the following connections:</h3>
-                    <%connections.forEach(connection => { %>
-                        <a href='/connections/<%= connection.id %>'>
-                            <p><%= connection.name %></p>
-                        </a>
-                    <% }); %>
+                    <ul>
+                        <%connections.forEach(connection => { %>
+                            <li>
+                                <a href='/connections/<%= connection.id %>'>
+                                    <p><%= connection.name %></p>
+                                </a>
+                            </li>
+                        <% }); %>
+                    </ul>
                 <% } else { %>
                     <p>You have not created any connections</p>
                 <% } %>
@@ -22,11 +26,15 @@
                         <tr>
                             <th>Connection Name</th>
                             <th>RSVP Status</th>
+                            <th>Delete</th>
                         </tr>
                         <%rsvps.forEach(rsvp => { %>
                             <tr>
                                 <td><a href = '/connections/<%= rsvp.connection.id %>'><%= rsvp.connection.name %></a></td>
                                 <td><%= rsvp.rsvp %></td>
+                                <form>
+                                    <td><button type="submit" formmethod="POST" formaction="/connections/<%= rsvp.connection._id %>/rsvp?_method=DELETE" class="connection_change_button" id="rsvp_delete_button">Delete</button></td>
+                                </form>
                             </tr>
                         <% }); %>
                     </table>
