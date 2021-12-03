@@ -20,7 +20,7 @@ exports.create = (req, res, next) => {
     connection.save()
         .then(connection => {
             req.flash('success', 'Connection has been created successfully');
-            req.redirect('/connections');
+            res.redirect('/connections');
         })
         .catch(err => {
             if (err.name === 'ValidationError') {

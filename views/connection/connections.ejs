@@ -7,7 +7,7 @@
                     <h3 class="connections_list_header">Learning/Practice:</h3>
                     <ul class="connections_list" id="learning_practice_list">
                         <% connections.forEach(connection=>{ %>
-                            <% if (connection.category == 'Learning/Practice') { %>
+                            <% if (connection.category == 'LearningAndPractice') { %>
                                 <li class="connections_list_item learning_practice_list_item">
                                     <a href="/connections/<%= connection.id %>" class="connection_link">
                                         <%= connection.name %>

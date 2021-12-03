@@ -3,7 +3,7 @@
     "$oid": "619409fb8f2001d1dc5ffa53"
   },
   "name": "Learn to Solve the Cube: Beginners Course",
-  "category": "Learning/Practice",
+  "category": "LearningAndPractice",
   "details": "Any beginners are welcome to come learn the first, most basic method to get started learning how to solve the cube. Come get started along your path to becoming a cuber!",
   "date": "2022-12-12",
   "start_time": "13:00",
@@ -19,7 +19,7 @@
     "$oid": "61940a7b8f2001d1dc5ffa68"
   },
   "name": "Learn F2L the Easy Way: Intermediate Course",
-  "category": "Learning/Practice",
+  "category": "LearningAndPractice",
   "details": "For intermediate cubers seeking to improve their times, and turn corner and edge insertion into one fluent process. Come meet and learn f2l, one of the biggest ways to speed up your times and score new records!",
   "date": "2022-12-13",
   "start_time": "13:00",
@@ -35,7 +35,7 @@
     "$oid": "61940b438f2001d1dc5ffa6e"
   },
   "name": "Practicing Oll and Pll Alogrithms: Group Practice",
-  "category": "Learning/Practice",
+  "category": "LearningAndPractice",
   "details": "All cubers in the process of learning OLL and PLL, or cubers who are just looking to hang out and practice, there will be a practice session for OLL and PLL algorithms I am hosing at my house on this day",
   "date": "2022-12-14",
   "start_time": "14:00",

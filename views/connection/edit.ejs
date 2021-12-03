@@ -9,23 +9,23 @@
                     <input type="text" id="name" name="name" value="<%= connection.name %>" required><br><br><br>
                     <label for="category">category:</label>
 
-                    <% if (connection.category == 'Learning/Practice') { %>
+                    <% if (connection.category == 'LearningAndPractice') { %>
                         <select id="category" name="category" required>
-                    <option value = "Learning/Practice" selected>Learning/Practice</option>
+                    <option value = "LearningAndPractice" selected>LearningAndPractice</option>
                     <option value = "Competitions">Competitions</option>
                     <option value = "Social Gatherings">Social Gatherings</option>
                     <% } %>
 
                     <% if (connection.category == 'Competitions') { %>
                         <select id="category" name="category" required>
-                        <option value = "Learning/Practice">Learning/Practice</option>
+                        <option value = "LearningAndPractice">LearningAndPractice</option>
                         <option value = "Competitions" selected>Competitions</option>
                         <option value = "Social Gatherings">Social Gatherings</option>
                         <% } %>
 
                         <% if (connection.category == 'Social Gatherings') { %>
                             <select id="category" name="category" required>
-                            <option value = "Learning/Practice">Learning/Practice</option>
+                            <option value = "LearningAndPractice">LearningAndPractice</option>
                             <option value = "Competitions">Competitions</option>
                             <option value = "Social Gatherings" selected>Social Gatherings</option>
                             <% } %>

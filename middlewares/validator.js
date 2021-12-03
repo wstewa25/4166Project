@@ -37,7 +37,7 @@ exports.validateResult = (req, res, next) => {
 exports.validateConnection = [
     body('name', 'Connection Name cannot be empty').notEmpty().trim().escape(),
     body('details', 'Connection Details must be at least 10 characters in length').trim().escape().isLength({min: 10}),
-    body('category', 'Connection Category cannot be empty').notEmpty().trim().escape(),
+    body('category', 'Connection Category cannot be empty').notEmpty().trim().escape().isIn(['LearningAndPractice', 'Competitions', 'Social Gatherings']),
     body('date', 'Connection Date cannot be empty').notEmpty().trim().escape(),
     body('start_time', 'Connection start time cannot be empty').notEmpty().trim().escape(),
     body('end_time', 'Connection end time cannot be empty').notEmpty().trim().escape(),
