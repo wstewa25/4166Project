@@ -107,7 +107,7 @@ exports.delete = (req, res, next) => {
 //RSVP /connections/:id/rsvp: rsvp to this connection
 exports.rsvp = (req, res, next) => {
     let id = req.params.id;
-    rsvpModel.findOne({connection:id})
+    rsvpModel.findOne({connection:id, user:id})
     .then(rsvp => {
         if (rsvp){
             rsvpModel.findByIdAndUpdate(rsvp._id, {rsvp:req.body.rsvp}, {useFindAndModify: false, runValidators: true})
