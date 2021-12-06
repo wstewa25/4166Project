@@ -41,6 +41,6 @@ exports.validateConnection = [
     body('date', 'Connection Date cannot be empty').notEmpty().trim().escape(),
     body('start_time', 'Connection start time cannot be empty').notEmpty().trim().escape(),
     body('end_time', 'Connection end time cannot be empty').notEmpty().trim().escape(),
-    body('image', 'Connection image link cannot be empty').notEmpty().trim().escape(),
+    body('image', 'Connection image link cannot be empty').notEmpty().trim(),
     body('location', 'Connection location cannot be empty').notEmpty().trim().escape(),
 ];
