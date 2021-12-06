@@ -72,13 +72,8 @@ exports.update = (req, res, next) => {
 
     model.findByIdAndUpdate(id, connection, { useFindAndModify: false, runValidators: true })
         .then(connection => {
-            if (connection) {
-                res.redirect('/connections/' + id);
-            } else {
-                let err = new Error('Cannot find a connection with id ' + id);
-                err.status = 404;
-                next(err);
-            }
+            req.flash('success', 'Successfully updated Connection!');
+            res.redirect('/connections/' + id);
         })
         .catch(err => {
             if (err.name === "ValidationError") {
