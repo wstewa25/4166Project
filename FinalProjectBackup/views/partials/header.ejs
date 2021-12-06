@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/cubeimg.png">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Charlotte Cubers Club</title>
+</head>
+
+<body>
+    <!--Header section of site-->
+    <header>
+        <section id="site_headliner">
+            <div class="header_div">
+                <div class="header_element">
+                    <a href="/"><img src="/images/cubeimg.png" alt="brand img" id="brandImg"></a>
+                </div>
+                <div class="header_element" id="page_header_text_div">
+                    <% if (user) { %>
+                        <% if (user.firstName) { %>
+                            <h2> Welcome <%= user.firstName %></h2>
+                        <% } %>
+                    <% } %>
+                    <h1 id="page_header_text">CHARLOTTE CUBING CLUB</h1>
+                </div>
+                <div class="header_element" id="login_register_links">
+                    <a href="/connections/new" class="user_link" id="start_new_connection_link">Start New Connection          |          </a>
+                    <% if (!user) { %>
+                        <a href="/users/new" class="user_link" id="register_link">Register          |          </a>
+                        <a href="/users/login" class="user_link" id="login_link">Login</a>
+                    <% } else { %>
+                        <a href="/users/profile" class="user_link" id="profile_link">Profile         |          </a>
+                        <a href="/users/logout" class="user_link" id="logout_link">Logout</a>
+                    <% } %>
+                </div>
+            </div>
+            <br>
+            <!--blue line under header-->
+            <div id="line_under_header1"></div>
+            <br>
+        </section>
+        <!--navigation bar-->
+        <section id="site_nav_bar_section">
+            <div id="nav_div">
+                <nav id="nav_bar">
+                    <div class="center_div_1">
+                        <a id="home_page_nav_link" href="/">Home</a><span>   |   </span>
+                        <a id="connections_page_nav_link" href="/connections">Connections</a><span>   |   </span>
+                        <a id="about_page_nav_link" href="/about">About Us</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <div class = "center_div_1">
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message=>{%>
+                <div class='success'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+    </div>

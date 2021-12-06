@@ -1,0 +1,61 @@
+<%- include('../partials/header.ejs') %>
+<main>
+    <section id="index_main_body_text_section">
+        <div class="center_div_1">
+            <br><br>
+            <h2 id="index_body_text_header"> Welcome, <%=user.firstName%> </h2>
+            <div id="index_body_text_div">
+                <% if(connections.length) { %>
+                    <h3>You have created to the following Connections:</h3>
+                    <table>
+                        <tr>
+                            <th>Connection Name</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <% connections.forEach(connection => { %>
+                            <tr>
+                                <td><a href='/connections/<%= connection.id %>'><%= connection.name %></a></td>
+                                <form>
+                                    <td><button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button></td>
+                                    <td><button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button></td>
+                                </form>
+                            </tr>
+                        <% }); %>
+                    </table>
+                <% } else { %>
+                    <p>You have not created any connections</p>
+                <% } %>
+                <br>
+                <br>
+                <div id="line_under_header1"></div>
+                <br>
+                <% if(rsvps.length) { %>
+                    <h3>You have RSVPed to the following Connections:</h3>
+                    <table>
+                        <tr>
+                            <th>Connection Name</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <%rsvps.forEach(rsvp => { %>
+                            <tr>
+                                <td><a href = '/connections/<%= rsvp.connection.id %>'><%= rsvp.connection.name %></a></td>
+                                <td><%= rsvp.rsvp %></td>
+                                <form>
+                                    <td><button type="submit" formmethod="GET" formaction="/connections/<%= rsvp.connection._id %>" class="connection_change_button" id="rsvp_edit_button">Edit</button></td>
+                                    <td><button type="submit" formmethod="POST" formaction="/connections/<%= rsvp.connection._id %>/rsvp?_method=DELETE" class="connection_change_button" id="rsvp_delete_button">Delete</button></td>
+                                </form>
+                            </tr>
+                        <% }); %>
+                    </table>
+                <% } else { %>
+                    <p>You have not RSVPed to any Connections</p>
+                <% } %>
+            <br><br>
+            </div>
+        </div>
+    </section>
+</main>
+    <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,54 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+        <section id="new_connection_body_section">
+            <br><br>
+            <div class="center_div_1">
+                <!--Create new connection form-->
+                <form id="new_connection_form" method="POST" action="/connections/<%= connection.id %>?_method=PUT">
+                    <label for="name">Connection Name:</label>
+                    <input type="text" id="name" name="name" value="<%= connection.name %>" required><br><br><br>
+                    <label for="category">category:</label>
+
+                    <% if (connection.category == 'LearningAndPractice') { %>
+                        <select id="category" name="category" required>
+                    <option value = "LearningAndPractice" selected>Learning/Practice</option>
+                    <option value = "Competitions">Competitions</option>
+                    <option value = "Social Gatherings">Social Gatherings</option>
+                    <% } %>
+
+                    <% if (connection.category == 'Competitions') { %>
+                        <select id="category" name="category" required>
+                        <option value = "LearningAndPractice">Learning/Practice</option>
+                        <option value = "Competitions" selected>Competitions</option>
+                        <option value = "Social Gatherings">Social Gatherings</option>
+                        <% } %>
+
+                        <% if (connection.category == 'Social Gatherings') { %>
+                            <select id="category" name="category" required>
+                            <option value = "LearningAndPractice">Learning/Practice</option>
+                            <option value = "Competitions">Competitions</option>
+                            <option value = "Social Gatherings" selected>Social Gatherings</option>
+                            <% } %>
+
+                </select><br><br><br>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" value="<%= connection.date %>" required><br><br><br>
+                        <label for="start_time">Start Time:</label>
+                        <input type="time" id="start_time" name="start_time" value="<%= connection.start_time %>" required><br><br><br>
+                        <label for="end_time">End Time:</label>
+                        <input type="time" id="end_time" name="end_time" value="<%= connection.end_time %>" required><br><br><br>
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" value="<%= connection.location %>" required><br><br><br>
+                        <label for="image">Image Link:</label>
+                        <input type="text" id="image" name="image" value="<%= connection.image %>" required><br><br><br>
+                        <br><br><br>
+                        <label for="details">Description:</label>
+                        <input type="text" id="details" name="details" value="<%= connection.details %>" minlength="10" required>
+                        <br><br><br><br>
+                        <input type="submit" value="Update Connection" id="create_connection_button">
+                        <br><br><br>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>

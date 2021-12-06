@@ -1,0 +1,50 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+        <!--connections catagories and events list-->
+        <section id="connections_page_main_section">
+            <div class="center_div_1">
+                <% if (connections.length) { %>
+                    <h3 class="connections_list_header">Learning/Practice:</h3>
+                    <ul class="connections_list" id="learning_practice_list">
+                        <% connections.forEach(connection=>{ %>
+                            <% if (connection.category == 'LearningAndPractice') { %>
+                                <li class="connections_list_item learning_practice_list_item">
+                                    <a href="/connections/<%= connection.id %>" class="connection_link">
+                                        <%= connection.name %>
+                                    </a>
+                                    <% } %>
+                                        <% }); %>
+                    </ul>
+
+                    <h3 class="connections_list_header">Competitions:</h3>
+                    <ul class="connections_list" id="competitions_list">
+                        <% connections.forEach(connection=>{ %>
+                            <% if (connection.category == 'Competitions') { %>
+                                <li class="connections_list_item competitions_list_item">
+                                    <a href="/connections/<%= connection.id %>" class="connection_link">
+                                        <%= connection.name %>
+                                    </a>
+                                    <% } %>
+                                        <% }); %>
+                    </ul>
+
+                    <h3 class="connections_list_header">Social Gatherings:</h3>
+                    <ul class="connections_list" id="social_gatherings_list">
+                        <% connections.forEach(connection=>{ %>
+                            <% if (connection.category == 'Social Gatherings') { %>
+                                <li class="connections_list_item social_gatherings_list_item">
+                                    <a href="/connections/<%= connection.id %>" class="connection_link">
+                                        <%= connection.name %>
+                                    </a>
+                                    <% } %>
+                                        <% }); %>
+                    </ul>
+
+                    <% } else {%>
+                        <h3>There are no connections available to display.</h3>
+                        <% } %>
+
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>

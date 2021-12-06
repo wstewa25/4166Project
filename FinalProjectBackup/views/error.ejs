@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>
+    <main>
+        <!--body section for index page-->
+        <section id="index_main_body_text_section">
+            <div class="center_div_1">
+                <br><br>
+                <h3>
+                    <%= error.status %> Error</h3>
+                <p>
+                    <%= error.message%>
+                </p>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>

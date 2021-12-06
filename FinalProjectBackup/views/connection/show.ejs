@@ -1,0 +1,86 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+        <section id="connection_page_body">
+            <!--placeholder connection for connection page-->
+            <div class="center_div_1">
+                <h3 id="connection_body_header">
+                    <%= connection.name %>
+                </h3>
+                <table id="connection_info_table">
+                    <tr class="connection_info_table_row">
+                        <td id="connection_image_element" rowspan=6><img src="<%= connection.image %>" alt="connection image" id="connection_image"></td>
+                        <td id="connection_host_label" class="connection_info_label">Host:</td>
+                        <td id="connection_host" class="connection_info_element">
+                            <%= connection.author.firstName + ' ' + connection.author.lastName %>
+                        </td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="category_label" class="connection_info_label">Category:</td>
+                        <td id="category" class="connection_info_element">
+                            <% if (connection.category == 'LearningAndPractice') { %>
+                                Learning/Practice
+                            <% } else { %>
+                                <%= connection.category %>
+                            <% } %>
+                        </td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="date_label" class="connection_info_label">Date:</td>
+                        <td id="date" class="connection_info_element">
+                            <%= connection.date %>
+                        </td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="start_time_label" class="connection_info_label">Start Time:</td>
+                        <td id="start_time" class="connection_info_element">
+                            <%= connection.start_time %>
+                        </td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="end_time_label" class="connection_info_label">End Time:</td>
+                        <td id="end_time" class="connection_info_element">
+                            <%= connection.end_time %>
+                        </td>
+                    </tr>
+                    <tr class="connection_info_table_row">
+                        <td id="location_label" class="connection_info_label">Location:</td>
+                        <td id="location" class="connection_info_element">
+                            <%= connection.location %>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <div id="details">
+                    <h3 id="details_label">Description:</h3>
+                    <p id="details_text">
+                        <%= connection.details %>
+                    </p>
+                    <br><br>
+                    <!--buttons for update/delete on connection-->
+                    <div id="connection_change_button_div">
+                        <% if(user == connection.author._id) { %>
+                            <form action="connections.html">
+                                <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="connection_change_button" id="connection_edit_button">Edit</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="connection_change_button" id="connection_delete_button">Delete</button>
+                            </form>
+                        <% } else if (user && user != connection.author._id) { %>
+                            <form action="connections.html">
+                                <h3>Will you be attending this event?</h3>
+                                <% if (rsvps) { %>
+                                    <h4>Signed Up so far: <%= rsvps %></h4>
+                                <% } else { %>
+                                    <h4>Signed Up so far: 0</h4>
+                                <% } %>
+                                <br>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'YES' name = 'rsvp' id="connection_yes_button">Yes</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'MAYBE' name = 'rsvp' id="connection_maybe_button">Maybe</button>
+                                <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'NO' name = 'rsvp' id="connection_no_button">No</button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <%- include('../partials/footer.ejs') %>

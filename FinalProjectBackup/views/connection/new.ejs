@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+        <section id="new_connection_body_section">
+            <br><br>
+            <div class="center_div_1">
+                <!--Create new connection form-->
+                <form id="new_connection_form" action='/connections' method='POST'>
+                    <label for="name">Connection Name:</label>
+                    <input type="text" id="name" name="name" required><br><br><br>
+                    <label for="category">category:</label>
+                    <select id="category" name="category" required>
+                    <option value = "LearningAndPractice">Learning/Practice</option>
+                    <option value = "Competitions">Competitions</option>
+                    <option value = "Social Gatherings">Social Gatherings</option>
+                </select><br><br><br>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required><br><br><br>
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" id="start_time" name="start_time" required><br><br><br>
+                    <label for="end_time">End Time:</label>
+                    <input type="time" id="end_time" name="end_time" required><br><br><br>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required><br><br><br>
+                    <label for="image">Image Link:</label>
+                    <input type="text" id="image" name="image" required><br><br><br>
+                    <br><br><br>
+                    <label for="details">Description:</label>
+                    <input type="text" id="details" name="details" required minlength="10">
+                    <br><br><br><br>
+                    <input type="submit" value="Create Connection" id="create_connection_button">
+                    <br><br><br>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
