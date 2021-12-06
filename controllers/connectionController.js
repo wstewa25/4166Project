@@ -54,13 +54,7 @@ exports.edit = (req, res, next) => {
 
     model.findById(id)
         .then(connection => {
-            if (connection) {
-                return res.render('./connection/edit', { connection });
-            } else {
-                let err = new Error('Cannot find a connection with id ' + id);
-                err.status = 404;
-                next(err);
-            }
+            return res.render('./connection/edit', { connection });
         })
         .catch(err => next(err));
 };
