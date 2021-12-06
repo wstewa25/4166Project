@@ -91,8 +91,7 @@ exports.update = (req, res, next) => {
 
 exports.delete = (req, res, next) => {
     let id = req.params.id;
-
-    model.findByIdAndDelete(id, { useFindAndModify: false })
+    Promise.all([model.findByIdAndDelete(id, {useFindAndModify: false}), rsvpModel.deleteMany({connection:id})])
         .then(connection => {
             if (connection) {
                 res.redirect('/connections');
